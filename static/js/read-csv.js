@@ -2,7 +2,7 @@
 var lines = [];
 var position = 0;
 var multipleof4 = 1;
-var tablechoice = 1;
+var tablechoice;
 
 function handleFiles(files) {
       // Check for the various File API support.
