@@ -1,0 +1,7 @@
+GM_xmlhttpRequest ( {
+    method:         'GET',
+    url:            'https://fbcdn-photos-a.akamaihd.net/hphotos-ak-ash4/299595_10150290138650735_543370734_8021370_355110168_n.jpg?dl=1',
+    onload:         function (responseDetails) {
+                        alert(responseDetails.statusText);
+                    }
+} );
