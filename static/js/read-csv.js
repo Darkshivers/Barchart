@@ -3,6 +3,7 @@ var lines = [];
 var position = 0;
 var multipleof4 = 1;
 var tablechoice;
+var licenceplate;
 
 function handleFiles(files) {
       // Check for the various File API support.
