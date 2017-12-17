@@ -58,7 +58,7 @@
 
 <div id = "middle">
         <div id = "carbody"><img src="images\carbody.png"></div> 
-        <div id = "title"><p>L38 GUU</p></div>
+        <div id = "title"></div>
       
       </div>
 
@@ -83,16 +83,23 @@
 
   <script>
 
-    var url = "default"; 
+    
 
-window.takeScreenShot = function() {
+window.takeScreenShot = function(url) {
+
+
   html2canvas(document.getElementById("A4Page"), { letterRendering: 1, allowTaint : true, onrendered: function (canvas) {
-          document.body.appendChild(canvas);
 
+ 
+
+          document.body.appendChild(canvas);
           var link = document.createElement('a');
+
           link.download = url+".jpg";
-          link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+          link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
           link.click();
+
+          
 
       },
   });
@@ -295,6 +302,21 @@ window.takeScreenShot = function() {
       document.getElementById("bchart1").appendChild(div); 
       document.getElementById("p").appendChild(p);
       manual = false;
+    }
+  
+    function createlable(plate) {
+
+
+      document.getElementById("title").innerHTML = "";
+
+      var p = document.createElement("p");
+      var node = document.createTextNode(plate);
+      p.appendChild(node);
+
+      document.getElementById("title").appendChild(p);
+      takeScreenShot(plate);
+
+
     }
 
 /*

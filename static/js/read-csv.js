@@ -69,7 +69,7 @@ function handleFiles(files) {
             document.getElementById("bchart4").innerHTML = "";
             document.getElementById("p4").innerHTML = ""; 
 
-            for (i = 0; i<15; i++) 
+            for (i = 0; i<17; i++) 
             if (lines[position] != null) { 
                 heightnum = lines[position];
                 console.log(lines[position]);
@@ -107,9 +107,15 @@ function handleFiles(files) {
                 createchart4(standing);
             }
 
-            if (multipleof4 >= 16){
-                multipleof4 = 1;   
+            else if (multipleof4 == 16){
+                multipleof4++;
                 createchart4(standing);         
+            }
+
+            else if (multipleof4 = 17) {
+                createlable(lines[position]);
+                multipleof4 = 1;
+               
             }
         }
 
